@@ -10,8 +10,8 @@ myconn = mysql.connector.connect(
 
 mycursor = myconn.cursor()
 
-sql = " SELECT * FROM movies WHERE name=%s "
-data = ('vikins',)
+sql = " SELECT * FROM movies WHERE name=%s "        # get user as format string
+data = ('vikins',)                                  # user input, ',' is set because the execute command expects tuple not string, so it is a formating wise only
 
 mycursor.execute(sql , data)
 

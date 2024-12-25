@@ -13,7 +13,7 @@ mycursor = myconn.cursor()
 # mycursor.execute(" SELECT * FROM movies")
 mycursor.execute(" SELECT name , plot FROM movies")
 
-result = mycursor.fetchall()
+result = mycursor.fetchall()        # export fetched lines to a variable
 
 
 print(result[0])

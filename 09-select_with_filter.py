@@ -12,7 +12,7 @@ mycursor = myconn.cursor()
 
 mycursor.execute(" SELECT * FROM movies WHERE name='vikins' ")
 
-result = mycursor.fetchone()
+result = mycursor.fetchone()        # fetch a single row of data from the result set of a database que
 
 print(result)
 
