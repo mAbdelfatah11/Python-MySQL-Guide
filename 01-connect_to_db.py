@@ -1,16 +1,15 @@
-import mysql.connector
+import mysql.connector          # import package
 
-
-myconn = mysql.connector.connect(
-    host="localhost" ,
-    user = "root" ,
-    passwd = "toor" , 
-    # database = 'cars'
+# Establish Connection:
+myconn = mysql.connector.connect(       # pass connection credentials to "connect" method
+    host = 'localhost',                 # install mysql locally
+    user = 'root',
+    passwd = "toor",
+    # database = "dbname"                    # Not required 
 )
 
-mycursor = myconn.cursor()
+# setup a connection tunnel:
+mycursor = myconn.cursor()                  # setup a connection tunnel between connector library and mysql to start passing commands
 
-
-
-print('COnnected ')
-mycursor.execute("SHOW DATABASES")
+# execute commands against DB:
+mycursor.execute("QUERY.......")
